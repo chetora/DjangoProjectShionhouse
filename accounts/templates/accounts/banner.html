@@ -1,0 +1,55 @@
+{% load static %}
+<div class="row">
+    <div class="col-lg-12 border">
+        <h1>Use Exist</h1>
+        
+            {{UseExistss}} <br>
+
+        
+        <br>
+        <hr>
+        <br>
+        <h1>Use Count</h1>
+        
+            {{UseCounts}} <br>
+        
+        <br>
+        <hr>
+        <br>
+        <h1>Use Last</h1>
+        
+            {{UseLasts.id}} <br>
+            {{UseLasts.ImageURL}} <br> <hr>
+        
+        <br>
+        <hr>
+        <br>
+        <h1>Use First</h1>
+        
+            {{UseFirsts.id}} <br>
+            {{UseFirsts.ImageURL}} <br> <hr>
+        
+        <br>
+        <hr>
+        <br>
+        <h1>Use Orderby</h1>
+        {% for UseOrderby in UseOrderbys %}
+            {{UseOrderby.id}} <br>
+            {{UseOrderby.ImageURL}} <br> <hr>
+        {% endfor %}
+        <br>
+        <hr>
+        <br>
+        <h1>Use Exclude</h1>
+        {% for UseExclude in UseExcludes %}
+            {{UseExclude.id}} <br>
+            {{UseExclude.ImageURL}} <br> <hr>
+        {% endfor %}
+        <br>
+        <hr>
+        <br>
+        {% for Banner in Banners %}
+            <img src="{% static Banner.ImageURL %}" width="100%">
+        {% endfor %}
+    </div>
+</div>

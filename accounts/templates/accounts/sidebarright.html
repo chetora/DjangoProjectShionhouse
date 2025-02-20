@@ -1,0 +1,6 @@
+{% load static %}
+<div class="col-lg-3 border">
+    {% for ImageSidebarRight in ImageSidebarRights %}
+    <img src="{% static ImageSidebarRight.ImageURL %}" width="100%">
+{% endfor %}
+</div>
